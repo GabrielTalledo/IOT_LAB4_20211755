@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ligas"
+        android:enabled="true"
+        android:icon="@drawable/ligas_icon"
+        android:title="Ligas"/>
+    <item
+        android:id="@+id/posiciones"
+        android:enabled="true"
+        android:icon="@drawable/posiciones_icon"
+        android:title="Posiciones"/>
+    <item
+        android:id="@+id/resultados"
+        android:enabled="true"
+        android:icon="@drawable/resultados_icon"
+        android:title="Resultados"/>
+</menu>

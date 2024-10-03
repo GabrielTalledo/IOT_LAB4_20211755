@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_ligas">
+
+    <fragment
+        android:id="@+id/fragment_ligas"
+        android:name="com.example.telefutbul.Fragments.Ligas"
+        android:label="fragment_ligas"
+        tools:layout="@layout/fragment_ligas" >
+        <action
+            android:id="@+id/action_fragment_ligas_to_fragment_posiciones"
+            app:destination="@id/fragment_posiciones" />
+        <action
+            android:id="@+id/action_fragment_ligas_to_fragment_resultados"
+            app:destination="@id/fragment_resultados" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_posiciones"
+        android:name="com.example.telefutbul.Fragments.Posiciones"
+        android:label="fragment_posiciones"
+        tools:layout="@layout/fragment_posiciones" >
+        <action
+            android:id="@+id/action_fragment_posiciones_to_fragment_resultados"
+            app:destination="@id/fragment_resultados" />
+        <action
+            android:id="@+id/action_fragment_posiciones_to_fragment_ligas"
+            app:destination="@id/fragment_ligas" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_resultados"
+        android:name="com.example.telefutbul.Fragments.Resultados"
+        android:label="fragment_resultados"
+        tools:layout="@layout/fragment_resultados" >
+        <action
+            android:id="@+id/action_fragment_resultados_to_fragment_posiciones"
+            app:destination="@id/fragment_posiciones" />
+        <action
+            android:id="@+id/action_fragment_resultados_to_fragment_ligas"
+            app:destination="@id/fragment_ligas" />
+    </fragment>
+</navigation>

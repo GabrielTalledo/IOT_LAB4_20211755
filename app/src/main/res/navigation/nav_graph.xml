@@ -9,13 +9,21 @@
         android:id="@+id/fragment_ligas"
         android:name="com.example.telefutbul.Fragments.Ligas"
         android:label="fragment_ligas"
-        tools:layout="@layout/fragment_ligas" >
+        tools:layout="@layout/fragment_ligas">
         <action
             android:id="@+id/action_fragment_ligas_to_fragment_posiciones"
-            app:destination="@id/fragment_posiciones" />
+            app:destination="@id/fragment_posiciones"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
         <action
             android:id="@+id/action_fragment_ligas_to_fragment_resultados"
-            app:destination="@id/fragment_resultados" />
+            app:destination="@id/fragment_resultados"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
     </fragment>
     <fragment
         android:id="@+id/fragment_posiciones"
@@ -24,10 +32,18 @@
         tools:layout="@layout/fragment_posiciones" >
         <action
             android:id="@+id/action_fragment_posiciones_to_fragment_resultados"
-            app:destination="@id/fragment_resultados" />
+            app:destination="@id/fragment_resultados"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
         <action
             android:id="@+id/action_fragment_posiciones_to_fragment_ligas"
-            app:destination="@id/fragment_ligas" />
+            app:destination="@id/fragment_ligas"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
     </fragment>
     <fragment
         android:id="@+id/fragment_resultados"
@@ -36,9 +52,17 @@
         tools:layout="@layout/fragment_resultados" >
         <action
             android:id="@+id/action_fragment_resultados_to_fragment_posiciones"
-            app:destination="@id/fragment_posiciones" />
+            app:destination="@id/fragment_posiciones"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
         <action
             android:id="@+id/action_fragment_resultados_to_fragment_ligas"
-            app:destination="@id/fragment_ligas" />
+            app:destination="@id/fragment_ligas"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+/>
     </fragment>
 </navigation>

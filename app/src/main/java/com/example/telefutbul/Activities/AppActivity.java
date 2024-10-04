@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.NavHostController;
+import androidx.navigation.NavOptions;
+import androidx.navigation.NavOptionsBuilder;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -47,41 +49,67 @@ public class AppActivity extends AppCompatActivity implements BottomNavigationVi
         int currentId = bottomNav.getSelectedItemId();
         if(currentId != itemId){
 
-            // Desde LIGAS:
+            // A LIGAS:
             if(itemId == R.id.ligas){
 
+                /* Método alternativo con actions individuales
                 if(currentId == R.id.posiciones){
                     navController.navigate(R.id.action_fragment_posiciones_to_fragment_ligas);
                 } else if (currentId == R.id.resultados) {
                     navController.navigate(R.id.action_fragment_resultados_to_fragment_ligas);
-                }
-                return true;
+                }*/
+
+                navegar(R.id.fragment_ligas);
             }
 
-            // Desde POSICIONES:
+            // A POSICIONES:
             if(itemId == R.id.posiciones){
 
+                /* Método alternativo con actions individuales
                 if(currentId == R.id.ligas){
                     navController.navigate(R.id.action_fragment_ligas_to_fragment_posiciones);
                 } else if (currentId == R.id.resultados) {
                     navController.navigate(R.id.action_fragment_resultados_to_fragment_posiciones);
-                }
-                return true;
+                }*/
+
+                navegar(R.id.fragment_posiciones);
             }
 
-            // Desde RESULTADOS:
+            // A RESULTADOS:
             if(itemId == R.id.resultados){
 
+                /* Método alternativo con actions individuales
                 if(currentId == R.id.ligas){
                     navController.navigate(R.id.action_fragment_ligas_to_fragment_resultados);
                 } else if (currentId == R.id.posiciones) {
-                    navController.navigate(R.id.action_fragment_posiciones_to_fragment_ligas);
-                }
-                return true;
+                    navController.navigate(R.id.action_fragment_posiciones_to_fragment_resultados);
+                }*/
+
+                navegar(R.id.fragment_resultados);
             }
+
+            return true;
 
         }
         return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Descomentar el otro código para que esto funcione :D
+        //navController.popBackStack();
+        //supportFinishAfterTransition();
+        super.onBackPressed();
+    }
+
+    public void navegar(int fragmentoId){
+        NavOptions navOptions = new NavOptions.Builder().setEnterAnim(R.anim.enter_anim)
+                .setExitAnim(R.anim.exit_anim)
+                .setPopUpTo(navController.getGraph().getStartDestination(), true)
+                .build();
+        navController.navigate(fragmentoId, null, navOptions);
+        navController.popBackStack(fragmentoId, true);
+
     }
 
 }

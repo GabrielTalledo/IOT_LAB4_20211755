@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="355dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -122,7 +122,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center|start"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:paddingHorizontal="10dp">
 
                         <TextView
                             android:id="@+id/text_nombre_resul"
@@ -133,8 +133,8 @@
                             android:text="Gallinas Vs Poshos"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -146,8 +146,8 @@
                             android:text="N°1"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -159,8 +159,8 @@
                             android:text="Gallinas"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -172,8 +172,8 @@
                             android:text="Pollos"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -185,8 +185,8 @@
                             android:text="3 (L) - 2 (V))"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -198,8 +198,8 @@
                             android:text="13/12/2020"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                         <TextView
@@ -211,8 +211,8 @@
                             android:text="10450"
                             android:textAlignment="viewStart"
                             app:autoSizeMaxTextSize="14sp"
-                            app:autoSizeMinTextSize="9sp"
-                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeMinTextSize="11sp"
+                            app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform" />
 
                     </LinearLayout>

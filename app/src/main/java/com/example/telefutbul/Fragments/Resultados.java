@@ -18,14 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.telefutbul.Adapters.PosicionAdapter;
 import com.example.telefutbul.Adapters.ResultadoAdapter;
 import com.example.telefutbul.DTOs.Resultado;
 import com.example.telefutbul.DTOs.ResultadoDTO;
-import com.example.telefutbul.DTOs.TeamDTO;
 import com.example.telefutbul.R;
 import com.example.telefutbul.Services.SportsService;
-import com.example.telefutbul.databinding.FragmentPosicionesBinding;
 import com.example.telefutbul.databinding.FragmentResultadosBinding;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
@@ -61,7 +58,7 @@ public class Resultados extends Fragment implements SensorEventListener {
     RecyclerView rvResul;
     Button btnBuscar;
     SportsService sportsService;
-    String rondaAnterior="";
+    String busquedaAnterior ="";
     Integer sizeResultado = 0;
 
     List<Resultado> listResultados;
@@ -128,7 +125,7 @@ public class Resultados extends Fragment implements SensorEventListener {
             String temp = binding.inputTempResul.getText().toString();
             String ronda = binding.inputRondaResul.getText().toString();
 
-            if(!ronda.equals(rondaAnterior)) {
+            if(!busquedaAnterior.equals(idLiga+temp+ronda)) {
                 // Validación:
                 boolean validacion1 = true; //empty idLiga
                 boolean validacion2 = true; //empty temp
@@ -177,7 +174,7 @@ public class Resultados extends Fragment implements SensorEventListener {
                     mensaje += "La temporada debe tener el formato 20XX-20XY!";
                 }
 
-                rondaAnterior = ronda;
+                busquedaAnterior = idLiga+temp+ronda;
 
                 if (validacion1 && validacion2 && validacion3 && validacion4) {
                     // Llamada a la API:

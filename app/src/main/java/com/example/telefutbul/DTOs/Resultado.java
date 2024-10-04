@@ -108,7 +108,7 @@ public class Resultado {
 
     public String getStrThumb() {
         if(strThumb == null || strThumb.isEmpty()){
-            return "https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg";
+            return "https://www.trschools.com/templates/imgs/default_placeholder.png";
         }else{
             return strThumb;
         }
